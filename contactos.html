@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contactos — I.E. Nuevo Amanecer (Prototipo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tailwind.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="antialiased">
+
+<div class="bg-[var(--blue-deep)] text-white text-center text-[12px] sm:text-[13px] py-2 px-4">
+  PROTOTIPO VISUAL DE DISEÑO — sin backend, autenticación ni datos reales
+</div>
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--gray-line)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-sky flex items-center justify-center ring-2 ring-white shadow-[0_4px_14px_-4px_rgba(27,77,158,0.5)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" fill="white" opacity="0.18"/><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 6.8l1.4 2.9 3.2.4-2.3 2.2.6 3.2L12 14l-2.9 1.5.6-3.2-2.3-2.2 3.2-.4z" fill="white"/></svg></div>
+      <p class="font-display font-bold text-[15px] text-[var(--ink)]">I.E. Nuevo Amanecer</p>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-semibold">
+      <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Inicio</a>
+      <a href="nosotros.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Nosotros</a>
+      <a href="directorio.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Directorio</a>
+      <a href="contactos.html" class="px-3 py-2 rounded-lg bg-[var(--sky-light)] text-[var(--blue)]">Contactos</a>
+    </nav>
+    <a href="mesa-de-partes.html" class="btn-primary rounded-full px-5 py-2.5 text-sm hidden sm:inline-block">Mesa de Partes</a>
+  </div>
+</header>
+
+<main>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-16">
+    <p class="eyebrow mb-3">Escríbenos</p>
+    <h1 class="font-display text-[34px] sm:text-[42px] font-extrabold text-[var(--ink)] mb-10">Contactos</h1>
+
+    <div class="grid sm:grid-cols-3 gap-5 mb-12">
+      <div class="card rounded-[20px] p-6"><span class="badge badge-amber mb-3">Sede Inicial</span><p class="font-bold text-[var(--ink)] mb-1">Jr. Los Educadores 214</p><p class="text-sm text-[var(--ink-soft)]">Puno, Perú</p><p class="text-sm text-[var(--ink-soft)] mt-2">+51 951 234 568</p></div>
+      <div class="card rounded-[20px] p-6"><span class="badge badge-blue mb-3">Sede Primaria</span><p class="font-bold text-[var(--ink)] mb-1">Jr. Los Educadores 220</p><p class="text-sm text-[var(--ink-soft)]">Puno, Perú</p><p class="text-sm text-[var(--ink-soft)] mt-2">+51 951 234 569</p></div>
+      <div class="card rounded-[20px] p-6"><span class="badge badge-violet mb-3">Sede Secundaria</span><p class="font-bold text-[var(--ink)] mb-1">Av. Circunvalación 480</p><p class="text-sm text-[var(--ink-soft)]">Puno, Perú</p><p class="text-sm text-[var(--ink-soft)] mt-2">+51 951 234 570</p></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div class="card rounded-[26px] p-6 sm:p-8">
+        <h2 class="font-display text-[19px] font-bold text-[var(--ink)] mb-6">Envíanos un mensaje</h2>
+        <form onsubmit="return false" class="space-y-4">
+          <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Nombre</label><input type="text" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"></div>
+          <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Correo</label><input type="email" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"></div>
+          <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Mensaje</label><textarea rows="4" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)] resize-none"></textarea></div>
+          <button class="btn-primary rounded-full px-6 py-3 text-[15px]">Enviar mensaje</button>
+        </form>
+      </div>
+      <div class="space-y-6">
+        <div class="h-64 rounded-[26px] bg-[var(--sky-light)] flex items-center justify-center text-sm text-[var(--blue)] font-bold">MAPA INCRUSTADO</div>
+        <div class="card rounded-[20px] p-6">
+          <p class="font-bold text-[var(--ink)] mb-3">Horario de atención</p>
+          <p class="text-sm text-[var(--ink-soft)]">Lunes a viernes, 8:00 a.m. – 2:00 p.m.</p>
+          <div class="flex gap-3 mt-5">
+            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-[var(--sky-light)] flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--blue)"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-[var(--sky-light)] flex items-center justify-center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gradient-blue text-white/70 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between gap-3 text-[12px] text-white/50">
+    <p>© 2026 I.E. Nuevo Amanecer. Prototipo visual de diseño — sin funcionalidades reales.</p>
+    <a href="index.html" class="hover:text-white">← Volver al inicio</a>
+  </div>
+</footer>
+
+<button data-scroll-top class="scroll-top-btn" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

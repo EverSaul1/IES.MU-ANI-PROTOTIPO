@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — I.E. Nuevo Amanecer (Prototipo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tailwind.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="antialiased">
+
+<div class="bg-[var(--blue-deep)] text-white text-center text-[12px] sm:text-[13px] py-2 px-4">
+  PROTOTIPO VISUAL DE DISEÑO — sin backend, autenticación ni datos reales
+</div>
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--gray-line)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-sky flex items-center justify-center ring-2 ring-white shadow-[0_4px_14px_-4px_rgba(27,77,158,0.5)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" fill="white" opacity="0.18"/><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 6.8l1.4 2.9 3.2.4-2.3 2.2.6 3.2L12 14l-2.9 1.5.6-3.2-2.3-2.2 3.2-.4z" fill="white"/></svg></div>
+      <p class="font-display font-bold text-[15px] text-[var(--ink)]">I.E. Nuevo Amanecer</p>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-semibold">
+      <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Inicio</a>
+      <a href="nosotros.html" class="px-3 py-2 rounded-lg bg-[var(--sky-light)] text-[var(--blue)]">Nosotros</a>
+      <a href="biblioteca.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Biblioteca</a>
+      <a href="directorio.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Directorio</a>
+      <a href="contactos.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Contactos</a>
+    </nav>
+    <a href="mesa-de-partes.html" class="btn-primary rounded-full px-5 py-2.5 text-sm hidden sm:inline-block">Mesa de Partes</a>
+  </div>
+</header>
+
+<main>
+  <section class="bg-gradient-blue py-16 sm:py-20 text-center relative overflow-hidden">
+    <svg class="absolute -left-16 -top-16 opacity-15" width="300" height="300" viewBox="0 0 300 300"><circle cx="150" cy="150" r="150" fill="#fff"/></svg>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+      <p class="eyebrow !text-[var(--sky)] mb-3">Quiénes somos</p>
+      <h1 class="font-display text-[32px] sm:text-[42px] font-extrabold text-white">Treinta años acompañando a Puno a crecer</h1>
+    </div>
+  </section>
+
+  <div class="sticky top-[72px] z-40 bg-white border-b border-[var(--gray-line)]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 flex gap-6 overflow-x-auto text-sm font-bold text-[var(--ink-soft)]">
+      <a href="#historia" class="py-3.5 border-b-2 border-transparent hover:border-[var(--blue)] hover:text-[var(--ink)] whitespace-nowrap">Historia</a>
+      <a href="#mision" class="py-3.5 border-b-2 border-transparent hover:border-[var(--blue)] hover:text-[var(--ink)] whitespace-nowrap">Misión y visión</a>
+      <a href="#valores" class="py-3.5 border-b-2 border-transparent hover:border-[var(--blue)] hover:text-[var(--ink)] whitespace-nowrap">Valores</a>
+    </div>
+  </div>
+
+  <section id="historia" class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="font-display text-[26px] font-bold text-[var(--ink)] mb-6">Nuestra historia</h2>
+    <div class="space-y-5 text-[var(--ink-soft)] leading-relaxed text-[16px]">
+      <p>La Institución Educativa Nuevo Amanecer abrió sus puertas en 1996 como un pequeño programa de Inicial, atendiendo a un grupo de veinte niños de familias de la zona.</p>
+      <p>Con el paso de los años fue creciendo hasta incorporar Primaria en 2003 y Secundaria en 2011, consolidándose como un colegio de Educación Básica Regular completo.</p>
+      <p>Hoy, tres décadas después, seguimos con la misma vocación con la que empezamos: acompañar a cada estudiante desde sus primeros pasos hasta su egreso.</p>
+    </div>
+  </section>
+
+  <section id="mision" class="bg-[var(--sky-light)]/40 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 gap-6">
+      <div class="card rounded-[22px] p-7">
+        <div class="w-11 h-11 rounded-xl bg-gradient-sky flex items-center justify-center mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5z"/><path d="M6 10v6c2 1.5 4 2 6 2s4-.5 6-2v-6"/></svg></div>
+        <h3 class="font-display text-[19px] font-bold text-[var(--ink)] mb-2">Misión</h3>
+        <p class="text-[15px] text-[var(--ink-soft)] leading-relaxed">Brindar una educación integral de calidad en Inicial, Primaria y Secundaria, formando personas autónomas, responsables e innovadoras.</p>
+      </div>
+      <div class="card rounded-[22px] p-7">
+        <div class="w-11 h-11 rounded-xl bg-gradient-sky flex items-center justify-center mb-4"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 class="font-display text-[19px] font-bold text-[var(--ink)] mb-2">Visión</h3>
+        <p class="text-[15px] text-[var(--ink-soft)] leading-relaxed">Ser referentes en Puno por formar egresados con sólidas bases académicas, valores firmes y visión de futuro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="valores" class="max-w-4xl mx-auto px-4 sm:px-6 py-16">
+    <h2 class="font-display text-[26px] font-bold text-[var(--ink)] mb-8">Valores institucionales</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div class="flex gap-4"><span class="badge badge-blue shrink-0 !text-[15px] !px-3.5 !py-2">1</span><div><p class="font-bold text-[var(--ink)] mb-1">Respeto</p><p class="text-sm text-[var(--ink-soft)]">Hacia uno mismo, hacia los demás y hacia el entorno.</p></div></div>
+      <div class="flex gap-4"><span class="badge badge-blue shrink-0 !text-[15px] !px-3.5 !py-2">2</span><div><p class="font-bold text-[var(--ink)] mb-1">Responsabilidad</p><p class="text-sm text-[var(--ink-soft)]">Cumplir con los propios deberes y compromisos.</p></div></div>
+      <div class="flex gap-4"><span class="badge badge-blue shrink-0 !text-[15px] !px-3.5 !py-2">3</span><div><p class="font-bold text-[var(--ink)] mb-1">Innovación</p><p class="text-sm text-[var(--ink-soft)]">Buscar siempre nuevas formas de aprender y enseñar.</p></div></div>
+      <div class="flex gap-4"><span class="badge badge-blue shrink-0 !text-[15px] !px-3.5 !py-2">4</span><div><p class="font-bold text-[var(--ink)] mb-1">Solidaridad</p><p class="text-sm text-[var(--ink-soft)]">Apoyar a los compañeros y a la comunidad.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gradient-blue text-white/70 py-8">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between gap-3 text-[12px] text-white/50">
+    <p>© 2026 I.E. Nuevo Amanecer. Prototipo visual de diseño — sin funcionalidades reales.</p>
+    <a href="index.html" class="hover:text-white">← Volver al inicio</a>
+  </div>
+</footer>
+
+<button data-scroll-top class="scroll-top-btn" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias — I.E. Nuevo Amanecer (Prototipo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tailwind.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="antialiased">
+
+<div class="bg-[var(--blue-deep)] text-white text-center text-[12px] sm:text-[13px] py-2 px-4">
+  PROTOTIPO VISUAL DE DISEÑO — sin backend, autenticación ni datos reales
+</div>
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--gray-line)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-sky flex items-center justify-center ring-2 ring-white shadow-[0_4px_14px_-4px_rgba(27,77,158,0.5)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" fill="white" opacity="0.18"/><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 6.8l1.4 2.9 3.2.4-2.3 2.2.6 3.2L12 14l-2.9 1.5.6-3.2-2.3-2.2 3.2-.4z" fill="white"/></svg></div>
+      <p class="font-display font-bold text-[15px] text-[var(--ink)]">I.E. Nuevo Amanecer</p>
+    </a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-semibold">
+      <a href="index.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Inicio</a>
+      <a href="noticias.html" class="px-3 py-2 rounded-lg bg-[var(--sky-light)] text-[var(--blue)]">Noticias</a>
+      <a href="comunicados.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Comunicados</a>
+      <a href="eventos.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Eventos</a>
+      <a href="concursos.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Concursos</a>
+      <a href="contactos.html" class="px-3 py-2 rounded-lg hover:bg-[var(--sky-light)]">Contactos</a>
+    </nav>
+    <a href="mesa-de-partes.html" class="btn-primary rounded-full px-5 py-2.5 text-sm hidden sm:inline-block">Mesa de Partes</a>
+  </div>
+</header>
+
+<main>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-8">
+    <p class="eyebrow mb-3">Actualidad institucional</p>
+    <h1 class="font-display text-[34px] sm:text-[42px] font-extrabold text-[var(--ink)] mb-8">Noticias</h1>
+
+    <div class="flex flex-wrap gap-2.5 mb-10" data-chip-group="noticias-publica">
+      <span class="chip is-active" data-chip-filter="all">Todas</span>
+      <span class="chip" data-chip-filter="texto">Texto</span>
+      <span class="chip" data-chip-filter="pdf">PDF</span>
+      <span class="chip" data-chip-filter="video">Video</span>
+      <span class="chip" data-chip-filter="link">Enlaces</span>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-list="noticias-publica">
+
+      <button data-noticia-open="n1" class="card card-hover rounded-[20px] p-6 text-left" data-status="video">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="badge badge-blue">Video</span>
+          <span class="badge badge-amber ml-auto">Inicial</span>
+        </div>
+        <h3 class="font-display text-[17px] font-bold text-[var(--ink)] mb-2">Así vivimos el Día de la Familia en Inicial</h3>
+        <p class="text-[13.5px] text-[var(--ink-soft)] leading-relaxed">Un video resumen de las actividades compartidas entre padres e hijos durante la jornada.</p>
+        <p class="text-[12px] text-[var(--ink-soft)] mt-4 font-medium">30 may 2026</p>
+      </button>
+
+      <button data-noticia-open="n2" class="card card-hover rounded-[20px] p-6 text-left" data-status="pdf">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></span>
+          <span class="badge badge-blue">PDF</span>
+          <span class="badge badge-gray ml-auto">General</span>
+        </div>
+        <h3 class="font-display text-[17px] font-bold text-[var(--ink)] mb-2">Resultados de la evaluación censal 2025</h3>
+        <p class="text-[13.5px] text-[var(--ink-soft)] leading-relaxed">Informe completo con los resultados obtenidos por nuestros estudiantes de Primaria.</p>
+        <p class="text-[12px] text-[var(--ink-soft)] mt-4 font-medium">18 may 2026</p>
+      </button>
+
+      <button data-noticia-open="n3" class="card card-hover rounded-[20px] p-6 text-left" data-status="texto">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+          <span class="badge badge-blue">Texto</span>
+          <span class="badge badge-violet ml-auto">Secundaria</span>
+        </div>
+        <h3 class="font-display text-[17px] font-bold text-[var(--ink)] mb-2">Estudiantes de Secundaria ganan olimpiada regional</h3>
+        <p class="text-[13.5px] text-[var(--ink-soft)] leading-relaxed">Un equipo de 5.º de secundaria obtuvo el primer puesto en la olimpiada de robótica de Puno.</p>
+        <p class="text-[12px] text-[var(--ink-soft)] mt-4 font-medium">10 may 2026</p>
+      </button>
+
+      <button data-noticia-open="n4" class="card card-hover rounded-[20px] p-6 text-left" data-status="link">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg></span>
+          <span class="badge badge-blue">Enlace</span>
+          <span class="badge badge-gray ml-auto">General</span>
+        </div>
+        <h3 class="font-display text-[17px] font-bold text-[var(--ink)] mb-2">Inscripciones abiertas — Minedu, plataforma "Aprendo en casa"</h3>
+        <p class="text-[13.5px] text-[var(--ink-soft)] leading-relaxed">Compartimos el enlace oficial con recursos educativos complementarios para todos los niveles.</p>
+        <p class="text-[12px] text-[var(--ink-soft)] mt-4 font-medium">05 may 2026</p>
+      </button>
+
+      <button data-noticia-open="n5" class="card card-hover rounded-[20px] p-6 text-left" data-status="texto">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+          <span class="badge badge-blue">Texto</span>
+          <span class="badge badge-blue ml-auto">Primaria</span>
+        </div>
+        <h3 class="font-display text-[17px] font-bold text-[var(--ink)] mb-2">Nueva sala de cómputo para Primaria</h3>
+        <p class="text-[13.5px] text-[var(--ink-soft)] leading-relaxed">Inauguramos una sala equipada con 20 computadoras para las clases de tecnología.</p>
+        <p class="text-[12px] text-[var(--ink-soft)] mt-4 font-medium">28 abr 2026</p>
+      </button>
+
+      <button data-noticia-open="n6" class="card card-hover rounded-[20px] p-6 text-left" data-status="video">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-8 h-8 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="badge badge-blue">Video</span>
+          <span class="badge badge-gray ml-auto">General</span>
+        </div>
+        <h3 class="font-display text-[17px] font-bold text-[var(--ink)] mb-2">Resumen del aniversario institucional 2025</h3>
+        <p class="text-[13.5px] text-[var(--ink-soft)] leading-relaxed">Revive los mejores momentos de la celebración por nuestro 30.º aniversario.</p>
+        <p class="text-[12px] text-[var(--ink-soft)] mt-4 font-medium">20 abr 2026</p>
+      </button>
+
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gradient-blue text-white/70 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between gap-3 text-[12px] text-white/50">
+    <p>© 2026 I.E. Nuevo Amanecer. Prototipo visual de diseño — sin funcionalidades reales.</p>
+    <a href="index.html" class="hover:text-white">← Volver al inicio</a>
+  </div>
+</footer>
+
+<!-- ============ NOTICIA DETAIL MODALS ============ -->
+<div data-noticia-modal="n1" class="modal-backdrop hidden">
+  <div class="modal-card !max-w-xl">
+    <div class="flex items-center gap-2 mb-4"><span class="badge badge-blue">Video</span><span class="badge badge-amber">Inicial</span></div>
+    <p class="font-display text-[22px] font-bold text-[var(--ink)] mb-3">Así vivimos el Día de la Familia en Inicial</p>
+    <p class="text-[12px] text-[var(--ink-soft)] mb-5">30 may 2026 · Área de Imagen Institucional</p>
+    <div class="rounded-xl overflow-hidden bg-[var(--blue-deep)] aspect-video flex items-center justify-center mb-5 relative">
+      <div class="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+      <p class="absolute bottom-4 left-4 text-white/60 text-[12px] font-medium">Reproductor de YouTube — vista previa del prototipo</p>
+    </div>
+    <p class="text-[14.5px] text-[var(--ink-soft)] leading-relaxed mb-6">Padres, madres y estudiantes de Inicial compartieron juegos, dinámicas y un compartir por el Día de la Familia. La actividad buscó fortalecer los lazos entre el hogar y la escuela desde los primeros años.</p>
+    <div class="flex justify-end"><button data-close-modal class="btn-outline-blue rounded-full px-5 py-2.5 text-sm">Cerrar</button></div>
+  </div>
+</div>
+
+<div data-noticia-modal="n2" class="modal-backdrop hidden">
+  <div class="modal-card !max-w-xl">
+    <div class="flex items-center gap-2 mb-4"><span class="badge badge-blue">PDF</span><span class="badge badge-gray">General</span></div>
+    <p class="font-display text-[22px] font-bold text-[var(--ink)] mb-3">Resultados de la evaluación censal 2025</p>
+    <p class="text-[12px] text-[var(--ink-soft)] mb-5">18 may 2026 · Coordinación Académica</p>
+    <div class="rounded-xl border border-[var(--gray-line)] p-5 flex items-center gap-4 mb-6">
+      <div class="w-12 h-12 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></div>
+      <div class="flex-1 min-w-0"><p class="font-semibold text-[var(--ink)] text-sm truncate">Informe-ECE-2025.pdf</p><p class="text-[12px] text-[var(--ink-soft)]">2.4 MB</p></div>
+      <button class="btn-outline-blue rounded-full px-4 py-2 text-xs shrink-0">Descargar</button>
+    </div>
+    <p class="text-[14.5px] text-[var(--ink-soft)] leading-relaxed mb-6">Nuestros estudiantes de 2.º y 4.º grado de Primaria alcanzaron un nivel satisfactorio superior al promedio regional en comunicación y matemática.</p>
+    <div class="flex justify-end"><button data-close-modal class="btn-outline-blue rounded-full px-5 py-2.5 text-sm">Cerrar</button></div>
+  </div>
+</div>
+
+<div data-noticia-modal="n3" class="modal-backdrop hidden">
+  <div class="modal-card !max-w-xl">
+    <div class="flex items-center gap-2 mb-4"><span class="badge badge-blue">Texto</span><span class="badge badge-violet">Secundaria</span></div>
+    <p class="font-display text-[22px] font-bold text-[var(--ink)] mb-3">Estudiantes de Secundaria ganan olimpiada regional</p>
+    <p class="text-[12px] text-[var(--ink-soft)] mb-5">10 may 2026 · Área de Imagen Institucional</p>
+    <div class="space-y-4 text-[14.5px] text-[var(--ink-soft)] leading-relaxed mb-6">
+      <p>Un equipo conformado por cinco estudiantes de 5.º de secundaria representó a la institución en la Olimpiada Regional de Robótica de Puno, obteniendo el primer puesto en la categoría de robótica educativa.</p>
+      <p>El proyecto, guiado por el área de Ciencia y Tecnología, consistió en el diseño de un brazo robótico capaz de clasificar residuos reciclables de forma automática.</p>
+      <p>Felicitamos a los estudiantes y a su asesor por representar con orgullo a nuestra institución.</p>
+    </div>
+    <div class="flex justify-end"><button data-close-modal class="btn-outline-blue rounded-full px-5 py-2.5 text-sm">Cerrar</button></div>
+  </div>
+</div>
+
+<div data-noticia-modal="n4" class="modal-backdrop hidden">
+  <div class="modal-card !max-w-xl">
+    <div class="flex items-center gap-2 mb-4"><span class="badge badge-blue">Enlace</span><span class="badge badge-gray">General</span></div>
+    <p class="font-display text-[22px] font-bold text-[var(--ink)] mb-3">Inscripciones abiertas — Minedu, plataforma "Aprendo en casa"</p>
+    <p class="text-[12px] text-[var(--ink-soft)] mb-5">05 may 2026 · Coordinación Académica</p>
+    <div class="rounded-xl border border-[var(--gray-line)] p-5 flex items-center gap-4 mb-6">
+      <div class="w-12 h-12 rounded-lg bg-[var(--sky-light)] flex items-center justify-center shrink-0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg></div>
+      <div class="flex-1 min-w-0"><p class="font-semibold text-[var(--ink)] text-sm truncate">aprendoencasa.pe</p><p class="text-[12px] text-[var(--ink-soft)]">Enlace externo — Minedu</p></div>
+      <button class="btn-outline-blue rounded-full px-4 py-2 text-xs shrink-0">Abrir enlace</button>
+    </div>
+    <p class="text-[14.5px] text-[var(--ink-soft)] leading-relaxed mb-6">El Ministerio de Educación puso a disposición recursos complementarios gratuitos para todos los niveles. Recomendamos a las familias explorar la plataforma junto a sus hijos.</p>
+    <div class="flex justify-end"><button data-close-modal class="btn-outline-blue rounded-full px-5 py-2.5 text-sm">Cerrar</button></div>
+  </div>
+</div>
+
+<div data-noticia-modal="n5" class="modal-backdrop hidden">
+  <div class="modal-card !max-w-xl">
+    <div class="flex items-center gap-2 mb-4"><span class="badge badge-blue">Texto</span><span class="badge badge-blue">Primaria</span></div>
+    <p class="font-display text-[22px] font-bold text-[var(--ink)] mb-3">Nueva sala de cómputo para Primaria</p>
+    <p class="text-[12px] text-[var(--ink-soft)] mb-5">28 abr 2026 · Dirección</p>
+    <div class="space-y-4 text-[14.5px] text-[var(--ink-soft)] leading-relaxed mb-6">
+      <p>Con el apoyo de la Asociación de Padres de Familia, inauguramos una nueva sala de cómputo equipada con 20 computadoras para las clases de tecnología del nivel Primaria.</p>
+      <p>El espacio permitirá a los estudiantes desarrollar habilidades digitales desde edades tempranas, en un ambiente seguro y supervisado.</p>
+    </div>
+    <div class="flex justify-end"><button data-close-modal class="btn-outline-blue rounded-full px-5 py-2.5 text-sm">Cerrar</button></div>
+  </div>
+</div>
+
+<div data-noticia-modal="n6" class="modal-backdrop hidden">
+  <div class="modal-card !max-w-xl">
+    <div class="flex items-center gap-2 mb-4"><span class="badge badge-blue">Video</span><span class="badge badge-gray">General</span></div>
+    <p class="font-display text-[22px] font-bold text-[var(--ink)] mb-3">Resumen del aniversario institucional 2025</p>
+    <p class="text-[12px] text-[var(--ink-soft)] mb-5">20 abr 2026 · Área de Imagen Institucional</p>
+    <div class="rounded-xl overflow-hidden bg-[var(--blue-deep)] aspect-video flex items-center justify-center mb-5 relative">
+      <div class="w-16 h-16 rounded-full bg-white/15 flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+      <p class="absolute bottom-4 left-4 text-white/60 text-[12px] font-medium">Reproductor de YouTube — vista previa del prototipo</p>
+    </div>
+    <p class="text-[14.5px] text-[var(--ink-soft)] leading-relaxed mb-6">Un repaso de las actividades por nuestro 30.º aniversario: desfile, presentaciones artísticas y el reconocimiento a docentes con más años de servicio.</p>
+    <div class="flex justify-end"><button data-close-modal class="btn-outline-blue rounded-full px-5 py-2.5 text-sm">Cerrar</button></div>
+  </div>
+</div>
+
+<button data-scroll-top class="scroll-top-btn" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

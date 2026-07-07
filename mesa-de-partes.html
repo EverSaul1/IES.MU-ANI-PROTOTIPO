@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesa de partes virtual — I.E. Nuevo Amanecer (Prototipo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tailwind.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="antialiased">
+
+<div class="bg-[var(--blue-deep)] text-white text-center text-[12px] sm:text-[13px] py-2 px-4">
+  PROTOTIPO VISUAL DE DISEÑO — el formulario no envía datos reales
+</div>
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[var(--gray-line)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-sky flex items-center justify-center ring-2 ring-white shadow-[0_4px_14px_-4px_rgba(27,77,158,0.5)]"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" fill="white" opacity="0.18"/><path d="M12 2l7 3v5.5c0 5-3 9.3-7 10.5-4-1.2-7-5.5-7-10.5V5z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 6.8l1.4 2.9 3.2.4-2.3 2.2.6 3.2L12 14l-2.9 1.5.6-3.2-2.3-2.2 3.2-.4z" fill="white"/></svg></div>
+      <p class="font-display font-bold text-[15px] text-[var(--ink)]">I.E. Nuevo Amanecer</p>
+    </a>
+    <nav class="hidden md:flex items-center gap-4 text-sm font-semibold">
+      <a href="index.html" class="hover:text-[var(--blue)]">Inicio</a>
+      <a href="contactos.html" class="hover:text-[var(--blue)]">Contactos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-10">
+    <p class="eyebrow mb-3">Trámites en línea</p>
+    <h1 class="font-display text-[34px] sm:text-[42px] font-extrabold text-[var(--ink)] mb-4">Mesa de partes virtual</h1>
+    <p class="text-[var(--ink-soft)] max-w-2xl mb-10">Presenta solicitudes, certificados o documentos a la institución sin necesidad de acercarte de forma presencial, y haz seguimiento del estado de tu expediente en cualquier momento.</p>
+
+    <div class="grid lg:grid-cols-[1.3fr,1fr] gap-8">
+      <div class="card rounded-[26px] p-6 sm:p-8">
+        <h2 class="font-display text-[19px] font-bold text-[var(--ink)] mb-1">Nueva solicitud</h2>
+        <p class="text-sm text-[var(--ink-soft)] mb-6">Completa el formulario. Los campos marcados con * son obligatorios.</p>
+        <form onsubmit="return false" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Nombre completo *</label><input type="text" required placeholder="Ej. María Quispe Mamani" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"></div>
+            <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">DNI *</label><input type="text" required placeholder="8 dígitos" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"></div>
+            <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Correo electrónico *</label><input type="email" required placeholder="correo@ejemplo.com" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"></div>
+            <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Teléfono *</label><input type="tel" required placeholder="9XX XXX XXX" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"></div>
+          </div>
+          <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Nivel del estudiante (si aplica)</label><select class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm bg-white outline-none focus:border-[var(--blue)]"><option>No aplica</option><option>Inicial</option><option>Primaria</option><option>Secundaria</option></select></div>
+          <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Asunto *</label><select required class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm bg-white outline-none focus:border-[var(--blue)]"><option>Solicitud de certificado de estudios</option><option>Constancia de matrícula</option><option>Traslado de matrícula</option><option>Reclamo o queja</option><option>Otro trámite</option></select></div>
+          <div><label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Descripción *</label><textarea required rows="4" placeholder="Describe tu solicitud con el mayor detalle posible…" class="w-full border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)] resize-none"></textarea></div>
+          <div>
+            <label class="block text-sm font-semibold text-[var(--ink)] mb-1.5">Adjuntar PDF</label>
+            <div class="border-2 border-dashed border-[var(--gray-line)] rounded-xl p-6 text-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--ink-soft)" stroke-width="1.8" class="mx-auto mb-2"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 21h14"/></svg>
+              <p class="text-sm text-[var(--ink-soft)]">Arrastra tu archivo o <span class="text-[var(--blue)] font-semibold underline">selecciona un PDF</span></p>
+              <p class="text-[12px] text-[var(--ink-soft)] mt-1">Máximo 10 MB</p>
+            </div>
+          </div>
+          <button class="btn-primary rounded-full px-6 py-3 text-[15px]">Enviar solicitud</button>
+        </form>
+      </div>
+
+      <div class="space-y-6">
+        <div class="card rounded-[26px] p-6">
+          <h2 class="font-display text-[17px] font-bold text-[var(--ink)] mb-4">Consultar mi expediente</h2>
+          <div class="flex gap-2"><input type="text" placeholder="N.° de expediente" class="flex-1 border border-[var(--gray-line)] rounded-xl px-4 py-2.5 text-sm outline-none focus:border-[var(--blue)]"><button class="btn-primary rounded-xl px-5 text-sm font-semibold">Buscar</button></div>
+        </div>
+        <div class="card rounded-[26px] p-6">
+          <p class="text-[12px] font-bold text-[var(--ink-soft)] uppercase tracking-wide mb-5">Expediente N.° 2026-000317 — simulador</p>
+          <div class="flex justify-between mb-5">
+            <div class="step is-current" data-step="pendiente"><span class="line"></span><span class="dot"></span><span class="text-[10.5px] font-medium">Pendiente</span></div>
+            <div class="step" data-step="revision"><span class="line"></span><span class="dot"></span><span class="text-[10.5px] font-medium">Revisión</span></div>
+            <div class="step" data-step="observado"><span class="line"></span><span class="dot"></span><span class="text-[10.5px] font-medium">Observado</span></div>
+            <div class="step" data-step="aprobado"><span class="line"></span><span class="dot"></span><span class="text-[10.5px] font-medium">Aprobado</span></div>
+            <div class="step" data-step="finalizado"><span class="line"></span><span class="dot"></span><span class="text-[10.5px] font-medium">Final</span></div>
+          </div>
+          <p data-status-note class="text-sm text-[var(--ink-soft)] bg-[var(--gray-light)] rounded-xl p-4 mb-5 min-h-[52px]"></p>
+          <div class="flex flex-wrap gap-2">
+            <button data-status-btn="pendiente" class="chip">Pendiente</button><button data-status-btn="revision" class="chip">En revisión</button><button data-status-btn="observado" class="chip">Observado</button><button data-status-btn="aprobado" class="chip">Aprobado</button><button data-status-btn="finalizado" class="chip">Finalizado</button>
+          </div>
+        </div>
+        <div class="card rounded-[26px] p-6">
+          <h3 class="font-display text-[15px] font-bold text-[var(--ink)] mb-4">Mis trámites recientes</h3>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-sm"><div><p class="font-medium text-[var(--ink)]">Certificado de estudios</p><p class="text-[12px] text-[var(--ink-soft)]">2026-000281 · 30 jun</p></div><span class="badge badge-green">Finalizado</span></div>
+            <div class="flex items-center justify-between text-sm"><div><p class="font-medium text-[var(--ink)]">Constancia de matrícula</p><p class="text-[12px] text-[var(--ink-soft)]">2026-000317 · 02 jul</p></div><span class="badge badge-blue">En revisión</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-gradient-blue text-white/70 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-between gap-3 text-[12px] text-white/50">
+    <p>© 2026 I.E. Nuevo Amanecer. Prototipo visual de diseño — sin funcionalidades reales.</p>
+    <a href="index.html" class="hover:text-white">← Volver al inicio</a>
+  </div>
+</footer>
+
+<button data-scroll-top class="scroll-top-btn" aria-label="Volver arriba"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
